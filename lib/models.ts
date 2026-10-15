@@ -1,0 +1,1 @@
+export const boards={women:['Laisa','Elle','Zey','Ameera','Carol','Venuri','Bakmini','Ushini'],men:['William','Vitor','Alan','Stefan','Matthieu','Tavish'],kids:['Artyom']} as const;export type Board=keyof typeof boards;export const isBoard=(x:string):x is Board=>x in boards;export const labels:Record<Board,string>={women:'Women',men:'Men',kids:'Next Face'};
