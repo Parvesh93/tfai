@@ -34,6 +34,24 @@ return <div className="tfai-issue" ref={root}>
 .tfai-issue .cover-right .small-photo{display:none}
 .tfai-issue .cover-right .text-link{margin-top:0}
 }
+/* Mobile roster: aligned cards, readable labels and a clean scroll hint. */
+@media(max-width:650px){
+.tfai-issue .roster-heading{padding:28px 5% 18px;gap:10px}
+.tfai-issue .roster-heading h2{font-size:clamp(31px,8.5vw,42px);line-height:1.08}
+.tfai-issue .roster-heading p{font-size:12px;line-height:1.55;max-width:290px}
+.tfai-issue .talent-scroller{gap:12px;padding:0 5% 12px;align-items:start;scroll-padding-inline:5%;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tfai-issue .talent-scroller::-webkit-scrollbar{display:none}
+.tfai-issue .talent-card{flex:0 0 82%;min-width:0;padding-top:0!important;display:block}
+.tfai-issue .talent-card:nth-child(2),.tfai-issue .talent-card:nth-child(3){padding-top:0!important}
+.tfai-issue .talent-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center top}
+.tfai-issue .talent-card .card-info{min-height:50px;align-items:center;gap:12px;padding:12px 0}
+.tfai-issue .talent-card strong{font-size:13px;line-height:1.25}
+.tfai-issue .talent-card .card-info span{font-size:9px;white-space:nowrap;letter-spacing:.04em}
+.tfai-issue .talent-foot{padding:8px 5% 34px;align-items:center;gap:12px;border-top:0}
+.tfai-issue .talent-foot .micro{font-size:9px;line-height:1.45;letter-spacing:.08em}
+.tfai-issue .talent-foot .micro:first-child{max-width:50%}
+.tfai-issue .talent-foot .micro:last-child{text-align:right;white-space:nowrap}
+}
 @media(prefers-reduced-motion:reduce){.tfai-issue .enter{opacity:1;transform:none;transition:none}.tfai-issue .cover-image img,.tfai-issue .talent-card img{transition:none}}
 `}</style>
 <div className="issue-progress" style={{width:progress+'%'}}/>
