@@ -14,3 +14,8 @@
 .footer-cols a{font-size:12px;line-height:1.45}
 .footer-end{padding-top:15px;font-size:9px}
 @media(max-width:600px){.footer{padding:30px 5% 18px}.footer-main{flex-direction:row;align-items:center;gap:12px;padding-bottom:22px}.footer-main strong{font-size:clamp(52px,15vw,85px)}.footer-main p{font-size:8px}.footer-cols{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:25px 0}.footer-cols>div{gap:10px}.footer-cols small{font-size:9px}.footer-cols a{font-size:11px}.footer-end{font-size:8px}}
+
+/* Distinct global navigation surface, separated from page hero on every viewport. */
+.header{background:#fff;border-bottom:1px solid #e4e4e4;box-shadow:0 5px 18px rgba(0,0,0,.045);isolation:isolate;z-index:60}
+.header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:#e4e4e4;pointer-events:none}
+@media(max-width:600px){.header{background:#fff;border-bottom:1px solid #dedede;box-shadow:0 4px 12px rgba(0,0,0,.05)}}
