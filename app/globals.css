@@ -2,3 +2,15 @@
 
 /* Refined editorial direction: clean white, restrained typography, no italic display. */
 :root{--paper:#fff}body{background:#fff}em{font-family:inherit;font-style:normal;font-weight:inherit;letter-spacing:inherit}.header{background:#fff}.hero h1{font-size:clamp(48px,7.5vw,112px);letter-spacing:-.065em}.intro h2{font-size:clamp(30px,3.7vw,56px)}.section-head h2{font-size:clamp(36px,5vw,72px)}.statement h2{font-size:clamp(42px,6vw,90px)}.story-content h2,.production h2{font-size:clamp(34px,4vw,60px)}.apply-banner h2{font-size:clamp(40px,6vw,85px)}.social h2{font-size:clamp(38px,5.5vw,78px)}.inner>h1{font-size:clamp(58px,9vw,130px)}.prose>h1{font-size:clamp(55px,8vw,115px)}.people h2{font-size:clamp(43px,5vw,76px)}.closing h2{font-size:clamp(42px,6vw,86px)}.intro div>p{font-size:16px}.prose-lead p{font-size:clamp(16px,1.6vw,20px)}.prose-lead p:first-child{font-size:clamp(22px,2.5vw,34px)}.wrap{padding-top:90px;padding-bottom:90px}.story-content>p:not(.eyebrow),.production p:not(.eyebrow){font-size:14px}.board-caption,.inline-link{font-size:10px}@media(max-width:600px){.hero h1{font-size:clamp(45px,10.5vw,68px)}.inner>h1{font-size:clamp(48px,12vw,76px)}.intro h2{font-size:clamp(30px,8vw,45px)}.statement h2{font-size:clamp(40px,10vw,65px)}.apply-banner h2{font-size:clamp(38px,10vw,62px)}.wrap{padding-top:65px;padding-bottom:65px}}
+
+/* Compact global footer */
+.footer{padding:34px 4% 18px}
+.footer-main{align-items:center;padding-bottom:24px;gap:25px}
+.footer-main strong{font-size:clamp(56px,8vw,116px);line-height:.85;letter-spacing:-.12em}
+.footer-main p{font-size:10px;line-height:1.6;text-align:right}
+.footer-cols{padding:30px 0 32px;gap:24px}
+.footer-cols>div{gap:11px}
+.footer-cols small{margin-bottom:4px;font-size:10px;letter-spacing:.13em}
+.footer-cols a{font-size:12px;line-height:1.45}
+.footer-end{padding-top:15px;font-size:9px}
+@media(max-width:600px){.footer{padding:30px 5% 18px}.footer-main{flex-direction:row;align-items:center;gap:12px;padding-bottom:22px}.footer-main strong{font-size:clamp(52px,15vw,85px)}.footer-main p{font-size:8px}.footer-cols{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:25px 0}.footer-cols>div{gap:10px}.footer-cols small{font-size:9px}.footer-cols a{font-size:11px}.footer-end{font-size:8px}}
