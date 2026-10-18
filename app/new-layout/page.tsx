@@ -52,12 +52,25 @@ return <div className="tfai-issue" ref={root}>
 .tfai-issue .talent-foot .micro:first-child{max-width:50%}
 .tfai-issue .talent-foot .micro:last-child{text-align:right;white-space:nowrap}
 }
+/* Editorial ticker below the cover; continuous and reduced-motion friendly. */
+.tfai-issue .tfai-marquee{overflow:hidden;background:#171717;color:#fff;border-block:1px solid #171717;padding:17px 0;white-space:nowrap}
+.tfai-issue .tfai-marquee-track{display:flex;width:max-content;animation:tfai-ticker 42s linear infinite;will-change:transform}
+.tfai-issue .tfai-marquee-unit{flex:none;display:inline-flex;align-items:center;gap:28px;padding-right:28px;font-size:clamp(12px,1.25vw,17px);font-weight:600;letter-spacing:.17em}
+.tfai-issue .tfai-marquee-unit b{font-size:12px;font-weight:400;color:#aaa}
+.tfai-issue .tfai-marquee:hover .tfai-marquee-track{animation-play-state:paused}
+@keyframes tfai-ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:650px){.tfai-issue .tfai-marquee{padding:13px 0}.tfai-issue .tfai-marquee-unit{font-size:11px;gap:19px;padding-right:19px;letter-spacing:.12em}}
+@media(prefers-reduced-motion:reduce){.tfai-issue .tfai-marquee-track{animation:none}}
 @media(prefers-reduced-motion:reduce){.tfai-issue .enter{opacity:1;transform:none;transition:none}.tfai-issue .cover-image img,.tfai-issue .talent-card img{transition:none}}
 `}</style>
 <div className="issue-progress" style={{width:progress+'%'}}/>
 
 
 <section className="issue-cover"><div className="cover-left"><h1>WORLD<br/>OF TFAI</h1><p>AN INDEPENDENT MODEL MANAGEMENT AGENCY.<br/>A DIFFERENT POINT OF VIEW.</p></div><div className="cover-image"><img src={images.cover} alt="Contemporary fashion editorial photograph"/><span className="image-credit">THE WORLD OF TFAI / EDITION 01</span></div><div className="cover-right"><div><span className="micro">THE COVER STORY</span><h2>NEW FACES.<br/>NEW RULES.</h2><p>Individuality is the new standard. We represent the people who bring something different to the frame.</p><Link className="text-link" href="/about">ENTER OUR WORLD <span>↗</span></Link></div><img className="small-photo" src={images.detail} alt="Second editorial fashion image"/></div></section>
+<section className="tfai-marquee" aria-label="TFAI model management in India and Sri Lanka">
+<div className="tfai-marquee-track">
+<span className="tfai-marquee-unit">INDIVIDUALITY <b>✳</b> REPRESENTATION <b>✳</b> INDIA &amp; SRI LANKA <b>✳</b> WORLD OF TFAI <b>✳</b></span><span className="tfai-marquee-unit">INDIVIDUALITY <b>✳</b> REPRESENTATION <b>✳</b> INDIA &amp; SRI LANKA <b>✳</b> WORLD OF TFAI <b>✳</b></span><span className="tfai-marquee-unit">INDIVIDUALITY <b>✳</b> REPRESENTATION <b>✳</b> INDIA &amp; SRI LANKA <b>✳</b> WORLD OF TFAI <b>✳</b></span><span className="tfai-marquee-unit">INDIVIDUALITY <b>✳</b> REPRESENTATION <b>✳</b> INDIA &amp; SRI LANKA <b>✳</b> WORLD OF TFAI <b>✳</b></span>
+</div></section>
 <section className="manifest issue-rule enter"><span className="micro">01 / A POINT OF VIEW</span><div><h2>We believe the most compelling thing a model can be is themselves.</h2><div className="manifest-bottom"><p>TFAI is a boutique agency representing emerging and established talent across India and Sri Lanka. We connect exceptional individuals with meaningful opportunities in fashion, image-making and creative production worldwide.</p><Link className="text-link" href="/about">THE AGENCY <span>↗</span></Link></div></div></section>
 <section className="issue-rule"><div className="roster-heading enter"><div><span className="micro">02 / PEOPLE TO KNOW</span><h2>Talent, without limits.</h2></div><p>A selection of the worlds we represent. Swipe through the boards to explore.</p></div><div className="talent-scroller" aria-label="Model boards">{talent.map(t=><Link className="talent-card" href={t.url} key={t.name}><img src={t.image} alt={t.name+' board editorial photograph'} loading="lazy"/><div className="card-info"><strong>{t.name}</strong><span>{t.index} / VIEW BOARD ↗</span></div></Link>)}</div><div className="talent-foot"><span className="micro">WOMEN / MEN / NEXT FACE</span><span className="micro">SCROLL HORIZONTALLY →</span></div></section>
 <section className="chapter"><img className="chapter-image" src={images.editorial} alt="Fashion editorial for creative production" loading="lazy"/><div className="chapter-copy enter"><span className="micro">03 / CREATIVE CONNECTIONS</span><div><h2>Behind every image is a bigger story.</h2><p>Through The Nude Media Agency, we bring talent, creators and production together. Distinctive ideas, carefully executed. Careers built beyond a single moment.</p></div><Link className="text-link" href="/nude-media">THE NUDE MEDIA AGENCY <span>↗</span></Link></div></section>
