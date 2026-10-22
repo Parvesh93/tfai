@@ -84,6 +84,36 @@ return <div className="nh" ref={root}>
 .nh .hero-copy h1{position:relative;z-index:2}
 @media(max-width:850px){.nh .hero-photo{left:11%;width:78%;top:7%;height:83%}.nh .hero-photo img{object-fit:contain;object-position:center bottom}}
 @media(max-width:600px){.nh .hero-photo{left:0;width:100%;top:10%;height:70%}.nh .hero-photo img{object-fit:contain;object-position:center bottom}.nh .hero-copy{z-index:3}.nh .hero-side{z-index:3}}
+
+/* Hero legibility and mobile composition refinements */
+.nh .nh-hero{min-height:760px}
+.nh .hero-side{position:absolute;top:32px;left:4%;right:4%;display:flex;flex-direction:row;justify-content:space-between;align-items:flex-start;text-align:left;gap:24px;z-index:5;pointer-events:none}
+.nh .hero-side .label{max-width:240px;line-height:1.5;font-size:10px;color:#262626;letter-spacing:.12em}
+.nh .hero-copy{grid-column:2;justify-self:end;width:min(100%,670px);padding-bottom:7vh;z-index:4;transform:translate3d(0,var(--nh-hero-text-y,0px),0)}
+.nh .hero-copy>span.label{display:block;color:#242424;background:rgba(239,239,235,.94);width:max-content;max-width:100%;padding:7px 10px;font-size:10px;letter-spacing:.11em}
+.nh .hero-copy h1{font-size:clamp(96px,11vw,200px);line-height:.82;margin:24px 0 22px;letter-spacing:-.025em}
+.nh .hero-copy p{color:#242424;background:rgba(239,239,235,.96);padding:10px 12px;max-width:360px;font-size:13px;line-height:1.55;position:relative;z-index:5}
+.nh .hero-copy .nh-button{position:relative;z-index:5;background:#efefeb;color:#1f1f1f;border:1px solid #1f1f1f;margin-top:12px}
+.nh .hero-copy .nh-button:hover{background:#1f1f1f;color:#fff}
+.nh .hero-photo{left:21%;width:57%;top:9%;height:91%;z-index:2}
+.nh .hero-photo img{transform:translate3d(0,var(--nh-hero-y,0px),0) scale(1);object-position:center bottom}
+.nh .hero-index{z-index:5}
+@media(max-width:850px){.nh .nh-hero{min-height:760px;height:820px}.nh .hero-photo{left:9%;width:82%;top:14%;height:68%}.nh .hero-copy{width:60%;padding-bottom:6vh}.nh .hero-copy h1{font-size:clamp(75px,12vw,120px)}}
+@media(max-width:600px){
+.nh .nh-hero{height:780px;min-height:780px;padding:0 5% 28px;display:block;overflow:hidden}
+.nh .hero-ghost{top:9%;left:-3%;font-size:55vw;line-height:.8}
+.nh .hero-side{top:17px;left:5%;right:5%;flex-direction:column;gap:4px;align-items:flex-start;text-align:left}
+.nh .hero-side .label{font-size:8px;line-height:1.3;max-width:none;letter-spacing:.09em}
+.nh .hero-photo{left:-3%;top:13%;width:106%;height:49%;align-items:flex-end}
+.nh .hero-photo img{object-fit:contain;object-position:center bottom;transform:translate3d(0,var(--nh-hero-y,0px),0) scale(1)}
+.nh .hero-copy{position:absolute;left:5%;right:5%;bottom:64px;width:auto;padding:0;transform:none!important}
+.nh .hero-copy>span.label{font-size:8px;padding:6px 8px;margin-bottom:8px}
+.nh .hero-copy h1{font-size:clamp(72px,19.2vw,112px);line-height:.83;margin:0 0 18px;letter-spacing:-.025em;overflow-wrap:normal}
+.nh .hero-copy p{background:none;padding:0;font-size:12px;line-height:1.55;max-width:310px;margin:0 0 13px}
+.nh .hero-copy .nh-button{margin-top:0;background:#efefeb}
+.nh .hero-index{bottom:20px;right:5%}
+}
+@media(max-width:390px){.nh .hero-copy h1{font-size:18.7vw}.nh .hero-photo{top:15%;height:45%}}
 @media(prefers-reduced-motion:reduce){.nh .nh-reveal{opacity:1;transform:none;filter:none;transition:none}.nh .hero-copy,.nh .hero-photo img,.nh .nh-collage .collage-grid img[data-scroll-motion]{transform:none!important;will-change:auto}.nh .nh-ticker .ticker-track{animation:none}}
 @media(prefers-reduced-motion:reduce){.nh .nh-reveal{opacity:1;transform:none;transition:none}.nh .ticker-track{animation:none}.nh .hero-photo img{transform:none!important}.nh .work-item,.nh .work-item img{transition:none}}
 `}</style>
